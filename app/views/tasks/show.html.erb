@@ -1,0 +1,11 @@
+<h2><%= @task.completed ? "☑" : "☐" %>
+<%= @task.title %></h2>
+<p><%= @task.details %></p>
+<hr>
+<%= link_to "Edit the task", edit_task_path %>
+<br>
+<%= link_to "Delete the task", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<hr>
+<%= link_to "Back to the list", tasks_path %>
